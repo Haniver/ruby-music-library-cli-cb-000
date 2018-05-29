@@ -17,4 +17,12 @@ class MusicLibraryController
       input = gets.chomp
     end
   end
+  def list_songs
+    songs = Song.all.collect { |song| song.name }.sort
+    counter = 1
+    songs.each do |song_name|
+      song = Song.find_by_name(song_name)
+      puts counter + ". " + song.artist + " - " + song_name + " - " + song.genre
+    end
+  end
 end

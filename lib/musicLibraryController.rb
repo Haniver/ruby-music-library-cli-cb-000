@@ -3,6 +3,8 @@ require_relative 'musicImporter.rb'
 require_relative 'artist.rb'
 require_relative 'genre.rb'
 require_relative 'song.rb'
+require_relative 'concerns/findable.rb'
+
 class MusicLibraryController
   def initialize(path = './db/mp3s')
     MusicImporter.new(path).import

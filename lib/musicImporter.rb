@@ -3,4 +3,7 @@ class MusicImporter
   def initialize(path)
     @path = path
   end
+  def files
+    Dir[path + "/*"]
+  end
 end

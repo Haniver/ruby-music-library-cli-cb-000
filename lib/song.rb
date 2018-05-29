@@ -42,8 +42,8 @@ class Song
     song_name = filename_array[1]
     genre_name = filename_array[2][0..-4]
     new_song = create(song_name)
-    song.artist = Artist.find_or_create_by_name(artist_name)
-    song.genre = Genre.find_or_create_by_name(genre_name)
+    new_song.artist = Artist.find_or_create_by_name(artist_name)
+    new_song.genre = Genre.find_or_create_by_name(genre_name)
     new_song
   end
 end

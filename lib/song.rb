@@ -36,5 +36,12 @@ class Song
   def self.find_or_create_by_name(song_name)
     find_by_name(song_name) || create(song_name)
   end
+  def new_from_filename(filename)
+    filename_array = filename.split(" - ")
+    artist_name = filename_array[0]
+    song_name = filename_array[1]
+    genre_name = filename_array[2]
+    create(song_name)
+  end
 end
 #binding.pry

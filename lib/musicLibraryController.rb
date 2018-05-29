@@ -1,5 +1,8 @@
 require 'pry'
 require 'musicImporter'
+require 'artist'
+require 'genre'
+require 'song'
 class MusicLibraryController
   def initialize(path = './db/mp3s')
     MusicImporter.new(path).import

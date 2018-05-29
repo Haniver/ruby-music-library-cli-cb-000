@@ -4,6 +4,6 @@ class MusicImporter
     @path = path
   end
   def files
-    puts "These are the files: " + Dir[@path + "/*"].inspect
+    puts "These are the files: " + Dir[@path + "/*"][20..-1].inspect
   end
 end

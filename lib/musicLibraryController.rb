@@ -22,7 +22,7 @@ class MusicLibraryController
     counter = 1
     songs.each do |song_name|
       song = Song.find_by_name(song_name)
-      puts counter + ". " + song.artist + " - " + song_name + " - " + song.genre
+      puts counter.to_i + ". " + song.artist + " - " + song_name + " - " + song.genre
     end
   end
 end

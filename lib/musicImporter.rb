@@ -4,7 +4,6 @@ class MusicImporter
     @path = path
   end
   def files
-    normalized = Dir[@path + "/*"].collect{ |filename| filename[21..-1]}
-    puts normalized.inspect
+    Dir[@path + "/*"].collect{ |filename| filename[21..-1]}
   end
 end

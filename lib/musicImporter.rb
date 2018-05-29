@@ -4,6 +4,7 @@ class MusicImporter
     @path = path
   end
   def files
-    puts "These are the files: " + Dir[@path + "/*"][10..20].inspect
+    normalized = Dir[@path + "/*"].collect{ |filename| filename[20..-1]}
+    puts normalized.inspect
   end
 end
